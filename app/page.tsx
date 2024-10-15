@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import {TwitterIcon,InstagramIcon,LinkedinIcon,
+import {
+TwitterIcon,InstagramIcon,LinkedinIcon,
   ArrowRightIcon,CheckCircleIcon,SparklesIcon,TrendingUpIcon,
   RocketIcon,SunMoonIcon,} from "lucide-react";
 import { auth } from "@clerk/nextjs/server";
@@ -29,7 +30,7 @@ export default function Home() {
         {/* Hero Section */}
         <div className="text-center py-20 lg:py-32 relative">
           <RocketIcon className="w-16 h-16 text-purple-500 mx-auto mb-6 animate-bounce" />
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 bg-clip-text text-transparent  bg-gradient-to-r from-[#ebf4f5] to-[#b5c6e0]">
             AI-Powered Social Media Content Generator
           </h1>
           <p className="text-xl mb-10 text-gray-300 max-w-2xl mx-auto">
