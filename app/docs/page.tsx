@@ -7,31 +7,31 @@ const docsSections = [
     title: "Getting Started",
     description:
       "Learn how to set up your account and create your first AI-generated content.",
-    link: "/docs/getting-started",
+    link: "/docs",
   },
   {
     title: "Twitter Threads",
     description:
       "Discover how to create engaging Twitter threads using our AI technology.",
-    link: "/docs/twitter-threads",
+    link: "/docs",
   },
   {
     title: "Instagram Captions",
     description:
       "Learn the best practices for generating Instagram captions that boost engagement.",
-    link: "/docs/instagram-captions",
+    link: "/docs",
   },
   {
     title: "LinkedIn Posts",
     description:
       "Explore techniques for crafting professional LinkedIn content with AI assistance.",
-    link: "/docs/linkedin-posts",
+    link: "/docs",
   },
   {
     title: "API Reference",
     description:
       "Detailed documentation for integrating our AI content generation into your applications.",
-    link: "/docs/api-reference",
+    link: "/docs",
   },
 ];
 

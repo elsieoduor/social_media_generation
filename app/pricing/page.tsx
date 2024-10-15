@@ -10,7 +10,7 @@ const pricingPlans = [
   {
     name: "Basic",
     price: "9",
-    priceId: "price_1PyFKGBibz3ZDixDAaJ3HO74",
+    priceId: "price_1QAErFGjDgrcvfesz5S1nf8H",
     features: [
       "100 AI-generated posts per month",
       "Twitter thread generation",
@@ -20,7 +20,7 @@ const pricingPlans = [
   {
     name: "Pro",
     price: "29",
-    priceId: "price_1PyFN0Bibz3ZDixDqm9eYL8W",
+    priceId: "price_1QAEsrGjDgrcvfestfKlNlqh",
     features: [
       "500 AI-generated posts per month",
       "Twitter, Instagram, and LinkedIn content",
@@ -57,10 +57,7 @@ export default function PricingPage() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          priceId,
-          userId: user?.id,
-        }),
+        body: JSON.stringify({priceId,userId: user?.id,}),
       });
       if (!response.ok) {
         const errorData = await response.json();

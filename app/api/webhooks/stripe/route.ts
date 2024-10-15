@@ -1,10 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
 import { headers } from "next/headers";
-import {
-  createOrUpdateSubscription,
-  updateUserPoints,
-} from "@/utils/db/actions";
+import {createOrUpdateSubscription,updateUserPoints,} from "@/utils/db/actions";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: "2024-06-20",
@@ -69,13 +67,12 @@ export async function POST(req: Request) {
       let plan: string;
       let pointsToAdd: number;
 
-      // Map price IDs to plan names and points
       switch (priceId) {
-        case "price_1PyFKGBibz3ZDixDAaJ3HO74":
+        case "price_1QAErFGjDgrcvfesz5S1nf8H":
           plan = "Basic";
           pointsToAdd = 100;
           break;
-        case "price_1PyFN0Bibz3ZDixDqm9eYL8W":
+        case "price_1QAEsrGjDgrcvfestfKlNlqh":
           plan = "Pro";
           pointsToAdd = 500;
           break;

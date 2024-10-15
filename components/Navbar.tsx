@@ -1,15 +1,8 @@
 "use client";
 import Link from "next/link";
-import {
-  SignInButton,
-  SignUpButton,
-  UserButton,
-  SignedOut,
-  SignedIn,
-  useAuth,
-} from "@clerk/nextjs";
+import {SignInButton,SignUpButton,UserButton,SignedOut,SignedIn,useAuth,} from "@clerk/nextjs";
 import { useState, useEffect } from "react";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X, SunMoon} from "lucide-react";
 
 export function Navbar() {
   const { userId } = useAuth();
@@ -34,9 +27,9 @@ export function Navbar() {
         <div className="flex flex-wrap justify-between items-center max-w-6xl mx-auto">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <Zap className="w-8 h-8 text-blue-500" />
+              <SunMoon className="w-8 h-8 text-blue-500" />
               <span className="text-xl sm:text-2xl font-bold text-white">
-                ThreadCraft AI
+                YuGen AI
               </span>
             </Link>
           </div>
@@ -45,10 +38,7 @@ export function Navbar() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
+              <X className="w-6 h-6" />) : (<Menu className="w-6 h-6" />)}
           </button>
           <div
             className={`w-full sm:w-auto ${
@@ -56,7 +46,7 @@ export function Navbar() {
             } sm:block mt-4 sm:mt-0`}
           >
             <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-8">
-              {["Features", "Pricing", "Docs"].map((item) => (
+              {["Pricing", "Docs"].map((item) => (
                 <Link
                   key={item}
                   href={`/${item.toLowerCase()}`}
