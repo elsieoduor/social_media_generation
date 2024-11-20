@@ -96,7 +96,6 @@ export default function GenerateContent() {
   };
   console.log(process.env.DATABASE_URL);
 
-
   const handleGenerate = async () => {
     if (!genAI || !user?.id || userPoints === null || userPoints < POINTS_PER_GENERATION) 
     {
